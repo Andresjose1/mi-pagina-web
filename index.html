@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Cursos Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Banner Principal -->
+    <header>
+        <img src="img/banner.jpg" alt="Banner del sitio" class="banner">
+    </header>
+
+    <!-- Sección de Cursos -->
+    <main>
+        <h1>Cursos Disponibles</h1>
+        <section class="cursos">
+            <div class="curso">
+                <img src="img/html.jpg" alt="Curso de HTML">
+                <h2>HTML</h2>
+            </div>
+            <div class="curso">
+                <img src="img/css.jpg" alt="Curso de CSS">
+                <h2>CSS</h2>
+            </div>
+            <div class="curso">
+                <img src="img/javascript.jpg" alt="Curso de JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="curso">
+                <img src="img/inteligencia-artificial.jpg" alt="Curso de Inteligencia Artificial">
+                <h2>Inteligencia Artificial</h2>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Título principal */
+main h1 {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #333;
+}
+
+/* Contenedor de cursos */
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 40px 40px;
+}
+
+/* Tarjeta de curso */
+.curso {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.curso:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del curso */
+.curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Título del curso */
+.curso h2 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #222;
+}
+// Mensaje de bienvenida al abrir la consola
+console.log("¡Bienvenido a la página de cursos web!");
+
+// Selecciona todas las tarjetas de curso
+const cursos = document.querySelectorAll('.curso');
+
+// Agrega un evento clic a cada tarjeta
+cursos.forEach(curso => {
+    curso.addEventListener('click', () =>
