@@ -1,28 +1,26 @@
-/* Fuente general */
+/* Estilo base del cuerpo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d1117;
-    color: #ffffff;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
 /* Banner principal */
 .banner {
     width: 100%;
-    height: auto;
-    display: block;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: block;
 }
 
-/* Título de la página */
+/* Título de La página */
 main h1 {
     text-align: center;
     margin: 40px 0 20px;
     font-size: 2.5rem;
-    color: #58a6ff;
+    color: #0056b3;
 }
 
 /* Contenedor de tarjetas de cursos */
@@ -35,35 +33,41 @@ main h1 {
 
 /* Tarjeta de curso */
 .curso {
-    background: #161b22;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
 .curso:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(88, 166, 255, 0.3);
 }
 
-/* Imagen del curso */
+/* Imagen de curso */
 .curso img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 2px solid #30363d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Nombre del curso */
 .curso h2 {
-    margin: 15px 0;
-    color: #c9d1d9;
+    margin-top: 15px;
     font-size: 1.2rem;
+    color: #222;
 }
 
-/* Responsive: mejora visual en pantallas pequeñas */
-@media (
+/* Responsive para móvil */
+@media (max-width: 600px) {
+    .cursos {
+        padding: 0 20px 40px;
+    }
 
+    main h1 {
+        font-size: 2rem;
+    }
+}
